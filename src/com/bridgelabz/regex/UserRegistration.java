@@ -6,6 +6,7 @@ public class UserRegistration {
 		validationOf.validateFirstName("Digvijay");
 		validationOf.validateLastName("Kadam");
 		validationOf.validateEmailId("digvijaykadam168@gmail.com");
-		validationOf.validateMobileNumber("91 9876000000");
+		validationOf.validateMobileNumber("91 9876543210");
+		validationOf.validatePasswordRuleOne("Digvijay68@)+");
 	}
 }
