@@ -4,15 +4,16 @@ import java.util.Scanner;
 
 public class ValidationOfUserRegistration {
     Scanner scanner = new Scanner(System.in);
-
+    
     public void validateFirstName(String firstName){
         String regex = "^[A-Z][a-z]{2,}$";
         System.out.println(firstName.matches(regex));
     }
-    
+
     public void validateLastName(String lastName){
         String regex = "^[A-Z][a-z]{2,}$";
         System.out.println(lastName.matches(regex));
+
     }
 
     public void validateEmailId(String emailId){
@@ -25,8 +26,15 @@ public class ValidationOfUserRegistration {
         System.out.println(mobileNumber.matches(regex));
     }
 
-    public void validatePasswordRuleOne(String password){
+    public boolean validatePasswordRuleOne(String password){
         String regex = "^[A-Za-z0-9.-_@#$%&^*()+:?]{8,}$";
-        System.out.println(password.matches(regex));
+        return (password.matches(regex));
+    }
+    public void validatePassword(String password){
+
+    }
+    public boolean validatePasswordRuleTwo(String password){
+        String regex = "^(?=.*[A-Z])[A-Za-z0-9._@#$%&^*()+:?]{8,}$";
+        return (password.matches(regex));
     }
 }
